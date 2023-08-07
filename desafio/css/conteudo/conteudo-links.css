@@ -1,0 +1,12 @@
+.conteudo__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

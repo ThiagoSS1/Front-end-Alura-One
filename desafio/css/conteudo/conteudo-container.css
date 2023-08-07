@@ -1,0 +1,15 @@
+.conteudo__container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.conteudo__container p {
+  color: #2A7AE4;
+  font-size: 1.5rem;
+}
+
+.conteudo__container strong {
+  color: black;
+}
+

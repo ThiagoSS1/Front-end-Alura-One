@@ -1,0 +1,17 @@
+.form__btn {
+  width: 97px;
+  height: 40px;
+  background: #2A7AE4;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.form__btn2 {
+  width: 9.43rem;
+  height: 2.5rem;
+  background: #2A7AE4;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}

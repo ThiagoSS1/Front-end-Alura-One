@@ -1,0 +1,16 @@
+ .form__input-label {
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 20px;
+  transition: 0.2s ease all;
+  z-index: 1;
+  color: #A2A2A2;
+}
+
+.form__input-conteudo:focus + .form__input-label,
+.form__input-conteudo:not(:placeholder-shown) + .form__input-label {
+  top: 2px;
+  font-size: 12px;
+  color: blue;
+}
