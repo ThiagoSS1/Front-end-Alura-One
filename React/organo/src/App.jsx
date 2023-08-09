@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import Banner from './components/Banner'
 import Form from './components/Form'
@@ -54,30 +55,11 @@ function App () {
     <>
       <Banner />
       <Form
+        times={times.map(times => times.nome)}
         aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
         value={colaboradores}
       />
-      <Time 
-        nome={'Gremio'}
-      />
-       <Time 
-        nome={'Inter'}
-      />
-       <Time 
-        nome={'Juventude'}
-      />
-       <Time 
-        nome={'Caxias'}
-      />
-       <Time 
-        nome={'Pelotas'}
-      />
-       <Time 
-        nome={'Palmeiras'}
-      />
-       <Time 
-        nome={'flamengo'}
-      />
+      {times.map(time => <Time nome={time.nome} key={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
     </>
   )
 }

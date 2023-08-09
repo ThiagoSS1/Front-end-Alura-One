@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import Button from '../Button'
 import Input from '../Input'
 import List from '../List'
+import Time from '../Time'
 import styles from './Form.module.css'
 import { useState } from 'react'
 
@@ -13,16 +15,6 @@ function Form (props) {
   const [image, setImage] = useState('')
   const [time, setTimes] = useState('')
   // const [cardCriado, setCardCriado] = useState(false)
-
-  const times = [
-    'gremio',
-    'inter',
-    'juventude',
-    'caxias',
-    'pelotas',
-    'Palmeiras',
-    'Flamengo'
-  ]
 
   function aoSalvar (evento) {
     evento.preventDefault()
@@ -38,7 +30,7 @@ function Form (props) {
 
   return (
     <section className={styles.form}>
-      <form onSubmit={aoSalvar}>
+      <form onSubmit={aoSalvar} >
         <h2>Preencha os dados pra criar o card do colaborador</h2>
         <Input
           obrigatorio={true}
@@ -62,7 +54,7 @@ function Form (props) {
         />
         <List
           obrigatorio={true}
-          itens={times}
+          itens={props.times}
           label="Times: "
           valor={time}
           aoAlterado={val => setTimes(val)}
@@ -70,6 +62,7 @@ function Form (props) {
         <Button >
           Criar Card
         </Button>
+
       </form>
     </section>
   )

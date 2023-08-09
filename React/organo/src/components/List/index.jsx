@@ -6,8 +6,8 @@ function List(props) {
     <div className={styles.list}>
       <label htmlFor="">{props.label}</label>
       <select required={props.required} onChange={evento => props.aoAlterado(evento.target.value)} value={props.value}>
-        {props.itens.map((item, index) => (
-          <option key={index}>{item}</option>
+        {props.itens.map((item) => (
+          <option key={item}>{item}</option>
         ))}
       </select>
     </div>
