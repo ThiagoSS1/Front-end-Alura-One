@@ -1,10 +1,17 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import styles from './Colaborador.module.css'
 
-function Colaborador() {
+function Colaborador ({nome, cargo, image, corDeFundo}) {
     return (
-        <div>
-            <h1>Colaborador</h1>
+        <div className={styles.colaborador}>
+            <div className={styles.cabecalho} style={{backgroundColor: corDeFundo}}>
+                <img src={image}/>
+            </div>
+            <div className={styles.rodape}>
+                <h4>{nome}</h4>
+                <h5>{cargo}</h5>
+            </div>
         </div>
     )
 }

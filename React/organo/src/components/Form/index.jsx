@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import Button from '../Button'
+// import Colaborador from '../Colaborador'
 import Input from '../Input'
 import List from '../List'
 import Time from '../Time'
@@ -25,6 +26,18 @@ function Form (props) {
       image,
       time
     })
+
+    props.aoDeletarColaborador({
+      nome,
+      cargo,
+      image,
+      time
+    })
+
+    setNome('')
+    setCargo('')
+    setImage('')
+    setTimes('')
   }
 
 
@@ -36,19 +49,19 @@ function Form (props) {
           obrigatorio={true}
           label="Nome"
           placeholder="Digite o seu nome"
-          value={nome}
+          valor={nome}
           aoAlterado={val => setNome(val)}
         />
         <Input
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite o seu cargo"
-          value={cargo}
+          valor={cargo}
           aoAlterado={val => setCargo(val)}
         />
         <Input
           label="Imagem"
-          value={image}
+          valor={image}
           placeholder="Digite a URL da sua imagem"
           aoAlterado={val => setImage(val)}
         />
@@ -63,7 +76,7 @@ function Form (props) {
           Criar Card
         </Button>
 
-      </form>
+      </form>     
     </section>
   )
 }
